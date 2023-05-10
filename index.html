@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>국군사설병원</title>
+        <link rel="shortcut icon" href="images/logo.ico">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/hospital.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/jquery-1.12.4.min.js"></script>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <div id="popup"> <!-- popup 시작 -->
+          <div class="pop_content">
+            <h1>진료 안내</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">5/1(월)<br />근로자의날</th>
+                  <th scope="col">5/5(금)<br />어린이날</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tr1">
+                  <td>외래 진료</td><td>화상 야간진료</td><td>화상 휴일진료</td>
+                </tr>
+                <tr>
+                  <td>오전 9시 ~ 오후 1시</td><td>오후 2시부터~</td><td>24시간</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>위치 : 2층 외래</p>
+            <p>문의 : 1599-1122</p>
+            <div id="popin_logo"><img src="images/logo.png" alt="logo"/><div>Oh hospital</div></div>
+          </div>
+          <div class="close">
+            <input type="checkbox" id="close_cb" />
+            <label for="close_cb">오늘은 이 창을 띄우지 않겠습니다.</label>
+            <!--<input class="close_btn" type="checkbox" value="팝업창 닫기"> -->
+          </div>
+        </div> <!-- popup 끝 -->
+
+        <div id="wrapper">  <!-- wrapper 시작 -->
+            <header> <!-- header 시작 -->
+              <nav id="top_menuBox">
+                <ul id="top_menu">
+                  <li><a href="#">로그인</a>&nbsp; | </li>
+                  <li><a href="#">회원가입</a>&nbsp; | </li>
+                  <li class="lang"><a href="#">LANGUAGE&#9660;</a>
+                    <ul class="lang_menu">
+                      <li><a href="#">Korea</a></li>
+                      <li><a href="#">English</a></li>
+                      <li><a href="#">日本語</a></li>
+                      <li><a href="#">中國語</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="logo" /></a></h1>
+              <form action="#" method="get" id="s_box">
+                <fieldset>
+                    <input type="search" name="search" id="search" placeholder="검색창 입니다.">
+                    <input type="image" src="images/돋보기.png" class="submit_img" title="검색" alt="검색">
+                </fieldset>
+              </form>
+              <nav id="gnb_box">
+                <ul id="gnb">
+                    <li class="gnb_item"><a href="#">진료 예약</a>
+                        <ul class="dropdown_list">
+                            <li class="dropdown_item"><a href="#">진료과/의료진</a></li>
+                            <li class="dropdown_item"><a href="#">진료시간표</a></li>
+                            <li class="dropdown_item"><a href="#">진료예약</a></li>
+                            <li class="dropdown_item"><a href="#">종합검진예약</a></li>
+                            <li class="dropdown_item"><a href="#">일반(공단)검진예약</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb_item"><a href="#">병원 안내</a>
+                        <ul class="dropdown_list">
+                            <li class="dropdown_item"><a href="#">진료안내</a></li>
+                            <li class="dropdown_item"><a href="#">입퇴원안내</a></li>
+                            <li class="dropdown_item"><a href="#">건강검진안내</a></li>
+                            <li class="dropdown_item"><a href="#">증명서발급안내</a></li>
+                            <li class="dropdown_item"><a href="#">찾아오시는길</a></li>
+                            <li class="dropdown_item"><a href="#">병원둘러보기</a></li>
+                            <li class="dropdown_item"><a href="#">전화번호안내</a></li>
+                            <li class="dropdown_item"><a href="#">편의시설</a></li>
+                            <li class="dropdown_item"><a href="#">면회안내</a></li>
+                            <li class="dropdown_item"><a href="#">주차안내</a></li>
+                            <li class="dropdown_item"><a href="#">유실물처리안내</a></li>
+                            <li class="dropdown_item"><a href="#">장례식장안내</a></li>
+                            <li class="dropdown_item"><a href="#">CCTV설치안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb_item"><a href="#">건강 정보</a>
+                        <ul class="dropdown_list">
+                            <li class="dropdown_item"><a href="#">건강정보영상</a></li>
+                            <li class="dropdown_item"><a href="#">건강칼럼</a></li>
+                            <li class="dropdown_item"><a href="#">질환정보사전</a></li>
+                            <li class="dropdown_item"><a href="#">간단한 자가검진</a></li>
+                            <li class="dropdown_item"><a href="#">신생아집중치료센터<br>퇴원 강좌영상</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb_item"><a href="#">나눔 소통</a>
+                        <ul class="dropdown_list">
+                            <li class="dropdown_item"><a href="#">고객센터</a></li>
+                            <li class="dropdown_item"><a href="#">건강강좌 및 이벤트</a></li>
+                            <li class="dropdown_item"><a href="#">커뮤니티(병원소식)</a></li>
+                            <li class="dropdown_item"><a href="#">사이버 병문안</a></li>
+                            <li class="dropdown_item"><a href="#">공모전</a></li>
+                            <li class="dropdown_item"><a href="#">소식지</a></li>
+                            <li class="dropdown_item"><a href="#">기부 및 후원</a></li>
+                            <li class="dropdown_item"><a href="#">사이버신고센터<br>(교직원용)</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb_item"><a href="#">병원 소개</a>
+                        <ul class="dropdown_list">
+                            <li class="dropdown_item"><a href="#">인사말</a></li>
+                            <li class="dropdown_item"><a href="#">역사</a></li>
+                            <li class="dropdown_item"><a href="#">개요</a></li>
+                            <li class="dropdown_item"><a href="#">미션</a></li>
+                            <li class="dropdown_item"><a href="#">비전</a></li>
+                            <li class="dropdown_item"><a href="#">조직</a></li>
+                            <li class="dropdown_item"><a href="#">안전보건경영방침</a></li>
+                            <li class="dropdown_item"><a href="#">병원상징</a></li>
+                            <li class="dropdown_item"><a href="#">홍보자료</a></li>
+                            <li class="dropdown_item"><a href="#">간호처</a></li>
+                            <li class="dropdown_item"><a href="#">호스피스완화의료</a></li>
+                        </ul>
+                    </li>
+                    <div class="dropdown_bg"></div>
+                </ul>
+                <img src="images/All-menu.png" alt="메뉴전체보기버튼" id="gnb_All" />
+              </nav>
+            </header> <!-- header 끝 -->
+      
+            <main> <!-- main 시작 -->
+              <section id="banner_box">
+                <ul class="banner_img">
+                  <li class="mySlides"><img src="images/ba_img1.png" alt="병원관련이미지1" /></li>
+                  <li class="mySlides"><img src="images/ba_img2.png" alt="병원관련이미지2" /></li>
+                  <li class="mySlides"><img src="images/ba_img3.png" alt="병원관련이미지3" /></li>
+                </ul>
+                <div class="slider_item">
+                  <div class="buttons">
+                    <button class="prev"></button>
+                    <button class="next"></button>
+                  </div>
+                  <ul class="dot_circle" >
+                    <li class="dot"><img src="images/slide_dot_n.png" alt="" /></li>
+                    <li class="dot"><img src="images/slide_dot_w.png" alt="" /></li>
+                    <li class="dot"><img src="images/slide_dot_w.png" alt="" /></li>
+                  </ul>
+                </div>
+              </section>
+      
+              <section id="lnb1">
+                <ul class="lnb1_list">
+                  <li class="lnb1_item">
+                    <h3>의료진/진료과 검색</h3>
+                    <form action="#" method="get">
+                      <input type="search" name="lnb1_search" class="lnb1_search" placeholder="진료과명/의료진명/질환명">
+                      <input type="image" src="images/돋보기.png" class="submit_img" title="검색" alt="검색">
+                    </form>
+                    <ul class="lnb1_sub">
+                      <li class="lnb1_sub_item"><a href="#">진료과 소개</a></li>
+                      <li class="lnb1_sub_item"><a href="#">진료과 시간표</a></li>
+                    </ul>
+                  </li>
+                  <li class="lnb1_item">
+                    <h3>첫 방문고객 예약상담</h3>
+                    <p>첫 방문 고객을 위한 예약을<br>간편하게 신청하실 수 있습니다.</p>
+                    <form action="#" method="get">
+                      <select name="carrier" class="carrier" title="전화번호">
+                        <option value="skt">SKT</option>
+                        <option value="kt">KT</option>
+                        <option value="lgu+">LGU+</option>
+                      </select>
+                      <input type="text" name="phone01" size="1" maxlength="3">
+                      <input type="text" name="phone01" size="2" maxlength="4">
+                      <input type="text" name="phone01" size="2" maxlength="4">
+                      <input type="submit" value="진료 신청" class="submit_btn">
+                    </form>
+                  </li>
+                  <li class="lnb1_item">
+                    <h3>진료 예약</h3>
+                    <p>쉽고 빠르게<br>진료 예약을 하실 수 있습니다.</p>
+                    <ul class="lnb1_sub">
+                      <li class="lnb1_sub_item"><a href="#">온라인 간편예약</a></li>
+                      <li class="lnb1_sub_item"><a href="#">회원본인 예약결과</a></li>
+                    </ul>
+                  </li>
+                  <li class="lnb1_item">
+                    <h3 class="lnb1_black">건강검진 예약</h3>
+                    <p class="lnb1_black">건강검진을 통해<br>질병유무를 확인해 보세요.</p>
+                    <ul class="lnb1_sub">
+                      <li class="lnb1_sub_item"><a href="#" class="lnb1_black">종합건강검진</a></li>
+                      <li class="lnb1_sub_item"><a href="#" class="lnb1_black">일반(공단)건강검진</a></li>
+                    </ul>
+                  </li>
+                  <li class="lnb1_item">
+                    <h3>진료 안내</h3>
+                    <p>진료과 및 진료시간표를<br>확인해보세요.</p>
+                    <ul class="lnb1_sub">
+                      <li class="lnb1_sub_item"><a href="#">외래진료 안내</a></li>
+                      <li class="lnb1_sub_item"><a href="#">입퇴원 절차 안내</a></li>
+                    </ul>
+                  </li>
+                  <li class="lnb1_item">
+                    <h3>증명서 발급</h3>
+                    <p>진단서, 진료기록사본 등<br>각종 증명서 발급 안내입니다.</p>
+                    <ul class="lnb1_sub">
+                      <li class="lnb1_sub_item"><a href="#">증명서 발급안내</a></li>
+                      <li class="lnb1_sub_item"><a href="#">인터넷 증명서 발급</a></li>
+                    </ul>
+                  </li>
+                  <li class="lnb1_item">
+                    <h3>병원 안내</h3>
+                    <p>병원 오시는 길 및<br>병원관련 소식을 만나보세요.</p>
+                    <ul class="lnb1_sub">
+                      <li class="lnb1_sub_item"><a href="#">오시는길</a></li>
+                      <li class="lnb1_sub_item"><a href="#">주차안내</a></li>
+                      <li class="lnb1_sub_item"><a href="#">병원둘러보기</a></li>
+                      <li class="lnb1_sub_item"><a href="#">전화번호안내</a></li>
+                    </ul>
+                  </li>
+                  <li class="lnb1_item">
+                    <h3 class="lnb1_item8 lnb1_black">
+						<img src="images/경고등.png" alt="경고등 아이콘" />공지사항
+						<img src="images/경고등.png" alt="경고등 아이콘" />
+					</h3>
+                    <div class="lnb1_item8_inner">
+                    <p class="lnb1_black">
+                      코로나19 예방을 위해 출입증을 소지한 보호자 1인을 제외하고
+                      방문객의 면회를 <span>전면 제한하오니,</span> 적극 협조 부탁드립니다.
+                    </p>
+                    </div>
+                  </li>
+                  </ul>
+              </section>
+      
+              <section id="lnb2">
+                <p>고객의 편의를 위해 최선을 다하겠습니다.</p>
+                <nav id="icon_menuBox">
+                  <ul class="lnb2_list">
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/진료시간표 icon.png" alt="진료시간표" /><br>진료시간표</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/순환버스 icon.png" alt="순환버스" /><br>순환버스</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/칭찬합시다 icon.png" alt="칭찬합시다" /><br>칭찬합시다</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/고객의소리 icon.png" alt="고객의소리" /><br>고객의소리</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/비급여진료비 icon.png" alt="비급여진료비" /><br>비급여진료비</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/소식지 icon.png" alt="소식지" /><br>소식지</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/진료협력센터 icon.png" alt="진료협력센터" /><br>진료협력센터</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/원목활동 icon.png" alt="원목활동" /><br>원목활동</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/기부 및 후원 icon.png" alt="기부" /><br>기부 및 후원</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/채용정보 icon.png" alt="채용정보" /><br>채용정보</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/입찰공고 icon.png" alt="입찰공고" /><br>입찰공고</a></li>
+                    <li class="lnb2_item"><a href="#"><img src="images/lnb2_icon/장례식장 icon.png" alt="장례식장" /><br>장례식장</a></li>
+                    </ul>
+                </nav>
+              </section>
+      
+              <section id="lnb3">
+                <div id="button_box1">
+                  <button class="video_btn">건강정보영상</button>
+                  <button class="column_btn">건강칼럼</button>
+                  <a class="more_btn">more</a>
+                </div>
+                <div id="contents_box1">
+                  <ul id="contents1-1" class="contents1">
+                    <li class="content1">
+                      <a href="#">
+                        <h3><img src="images/media1.png" alt="갑상선암 경구강 로봇수술 갑상선암 완치자의 이야기"/></h3>
+                        <h4>갑상선암 로봇수술 완...</h4>
+                      </a>
+                      <p class="date">2023-01-25</p>
+                    </li>
+                    <li class="content2">
+                      <a href="#">
+                        <h3><img src="images/media2.png" alt="혼자가 되게 하는... 노화성 난청 보청기 외에도 다른 치료법이 있다?" /></h3>
+                        <h4>노완성 난청 치료</h4>
+                      </a>
+                      <p class="date">2023-01-18</p>
+                    </li>
+                    <li class="content3">
+                      <a href="#">
+                        <h3><img src="images/media3.png" alt="백내장 수술이 답이 아닙니다!" /></h3>
+                        <h4>백내장 원인과 예방</h4>
+                      </a>
+                      <p class="date">2023-01-17</p>
+                    </li>
+                    <li class="content4">
+                      <a href="#">
+                        <h3><img src="images/media4.png" alt="췌장암 바로알기 오해와 진실 생활 속 예방법!" /></h3>
+                        <h4>췌장암 바로알기 3부</h4>
+                      </a>
+                      <p class="date">2022-11-23</p>
+                    </li>
+                  </ul>
+				  
+				  <ul id="contents1-2" class="contents1">
+                    <li class="content1">
+                      <a href="#">
+                        <h3><img src="images/column1.png" alt="요로결석"/></h3>
+                        <h4>찌릿 찌릿한 옆구리 통증!<br />'요로결석'</h4>
+                      </a>
+                      <p class="date">2023-04-14</p>
+                    </li>
+                    <li class="content2">
+                      <a href="#">
+                        <h3><img src="images/column2.png" alt="무지 외반증" /></h3>
+                        <h4>발가락의 모양을<br />망가뜨리는 '무지외반증'</h4>
+                      </a>
+                      <p class="date">2023-04-03</p>
+                    </li>
+                    <li class="content3">
+                      <a href="#">
+                        <h3><img src="images/column3.png" alt="통풍성관절염 증상은?" /></h3>
+                        <h4>바람만 스쳐도<br />욱신거린다면?! '통풍...</h4>
+                      </a>
+                      <p class="date">2023-03-24</p>
+                    </li>
+                    <li class="content4">
+                      <a href="#">
+                        <h3><img src="images/column4.png" alt="정계 정맥류" /></h3>
+                        <h4>고환의 정맥혈관<br />이상으로 발생하는..</h4>
+                      </a>
+                      <p class="date">2022-03-22</p>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+      
+              <section id="lnb4">
+                <div id="button_box2">
+                  <button class="info_btn">병원정보</button>
+                  <button class="media_btn">언론보도</button>
+                  <button class="recruit_btn">채용정보</button>
+                  <a class="more_btn">more</a>
+                </div>
+                <div id="contents_box2">
+                  <ul id="contents2-1" class="contents2">
+                    <li>
+                      <a href="#">
+                        <h4>제16차 호스피스 자원봉사자 교육 일정 안내</h4>
+                      </a>
+                      <p class="date d1">2023-02-22</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h4>의료원 의과대학장 및 병원장 취임식 개최</h4>
+                        <p>
+                          대구가톨릭대학교의료과 의과 대학장 및 병원장 취임식 개최...
+                        </p>
+                      </a>
+                      <p class="date d2">2023-01-20</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h4>건강보험심사평가원 1차 치매 적정성 평가 1등...</h4>
+                        <p>
+                          대구가톨릭대병원 건강보험심사 평가원 1차 치매 적정성 평가 1등 급대...
+                        </p>
+                      </a>
+                      <p class="date d3">2023-01-18</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h4>소화기내과 조형호 교수, 대한소화기내시경학회...</h4>
+                        <p>
+                          소화기내과 조형호 교수 2022년 대한소화기내시경학회 정기총회서...
+                        </p>
+                      </a>
+                      <p class="date d4">2023-01-17</p>
+                    </li>
+                  </ul>
+				  
+				  <ul id="contents2-2" class="contents2">
+                    <li>
+                      <a href="#">
+                        <h4>[메디컬월드뉴스] 정진용 교수, 대한뇌신경마취학...</h4>
+                      </a>
+                      <p class="date d1">2023-04-21</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h4>[라포르시안] 대구가톨릭대병원, 당뇨병 교육...</h4>
+                      </a>
+                      <p class="date d2">2023-04-20</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h4>[매일신문] 최재영 대구가톨릭대병원 수련행정팀...</h4>
+                      </a>
+                      <p class="date d3">2023-04-12</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h4>[후생신보] 대구가톨릭대병원 김대현 교수, 복...</h4>
+                      </a>
+                      <p class="date d4">2023-04-10</p>
+                    </li>
+                  </ul>
+				  
+				  <ul id="contents2-3" class="contents2">
+                    <li>
+                      <a href="#">
+                        <h4>[건강증진센터] 사무원 모집 공고</h4>
+						 <p>
+                          바로가기&#10140;
+                        </p>
+                      </a>
+                      <p class="date d1">2023-04-26</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h4>[심사평가팀] 간호사 모집 공고</h4>
+                        <p>
+                          바로가기&#10140;
+                        </p>
+                      </a>
+                      <p class="date d2">2023-04-20</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h4>[간호처] 외래 간호사 모집 공고</h4>
+                        <p>
+                          바로가기&#10140;
+                        </p>
+                      </a>
+                      <p class="date d3">2023-04-20</p>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <h4>[진단검사의학과] 임상병리사 모집 공고</h4>
+                        <p>
+                          바로가기&#10140;
+                        </p>
+                      </a>
+                      <p class="date d4">2023-04-17</p>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </main> <!-- main 끝 -->
+      
+            <footer>  <!-- footer 시작 -->
+              <nav id="foot_menuBox">
+                <ul class="foot_menu">
+                  <li><a href="#">환자의 권리와 의무</a> | </li>
+                  <li><a href="#">개인정보처리방침</a> | </li>
+                  <li><a href="#">이메일주소수집거부</a> | </li>
+                  <li><a href="#">비급여항목</a></li>
+                </ul>
+              </nav>
+              <div id="sns_box">
+                <ul class="share_sns">
+                  <li><button class="kakao"></button></li>
+                  <li><button class="instargram"></button></li>
+                  <li><button class="blog"></button></li>
+                  <li><button class="facebook"></button></li>
+                  <li><button class="twitter"></button></li>
+                </ul>
+              </div>
+              <address>
+                주소 : 경기 수원시 팔달구 덕영대로895번길 9-1<span> | </span> 
+                예약 및 대표전화 : 1599-1122<span> | </span>
+                팩스 : 031-294-7645
+              </address>
+              <h2 id="foot_logo"><img src="images/logo.png" alt="logo" /></h2>
+              <small>
+                Copyright&copy; oh kill Medical Center. All rights reserved
+              </small>
+            </footer>  <!-- footer 끝 -->
+        </div>  <!-- wrapper 끝 -->
+		<div id="top_bottom_move"> <!-- 맨위, 맨아래로 이동하는 버튼 -->
+			<div class="topMove tb" title="맨 위로 이동">&#9650;</div>
+			<div class="bottomMove tb" title="맨 아래로 이동">&#9660;</div>
+			<div class="wrapperFade tb" title="본문요소 보이기/숨기기 버튼">❤</div>
+			<div class="bodyBgChange tb" title="배경이미지 변경 버튼">✨</div>
+		</div>
+		<script src="js/hospital.js"></script>
+    </body>
+</html>

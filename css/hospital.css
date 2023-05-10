@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+body { background-image : url("../images/line_bg.png"), url("../images/body_bg1.jpg"); background-repeat : repeat-x, no-repeat;
+background-attachment : scroll, fixed; background-position : left 2581px,  center; background-size : cover, cover; transition : all 0.5s; }
+
+/* popup */
+#popup { width : 450px; height : 520px; border : 2px solid #ccc; 
+				box-shadow : 0 0 20px #000; position : fixed; left : 50%; top : 50%;
+				margin : -280px 0 0 -220px; z-index: 99999; 
+				background : rgb(66, 102, 221);  
+				/*animation : popup 2s linear;*/ display : none; }
+.pop_content { width : 410px; height : 470px; border : 5px solid rgb(0, 128, 100);
+					background : #fff; margin : 20px; text-align : center; 
+					padding : 60px 10px 20px 12px; box-sizing : border-box; position : relative;}
+.pop_content h1 { color : rgb(66, 102, 221); }
+table { margin : 40px 0; }
+table thead tr th { background : rgb(19, 143, 19); color : #fff; padding : 5px 0; }
+table tbody tr td { font-size : 14px; padding : 3px 10px; font-weight : bold; }
+tr.tr1 td { color : green; }
+.pop_content p { font-size : 20px; font-weight : bold; }
+#popin_logo { position : absolute; left : 80px; bottom : 0px; }
+#popin_logo img { width : 70px; height : 95px; float : left; }
+#popin_logo div { display : inline-block; margin : 45px 0 0 20px; font-weight : bold; }
+.close { position : absolute; bottom : 7px; left : 30px;  }
+.close input { cursor : pointer; }
+.close label { font-size : 12px; cursor : pointer; }
+.close_btn { position : absolute; bottom : 0px; left : 0px; width : 210px;
+					opacity: 0; }
+/*
+@keyframes popup {
+            0% { opacity : 0; }
+            50% { opacity : 0; }
+            100% { opacity : 1; }
+}
+*/
+
+/* wrapper */
+#wrapper { width : 1200px; margin : 0 auto; background : rgba(0, 114, 255,0.5); }
+
+/* header */
+header { width : 100%; height : 170px; position : relative; }
+#logo { position : absolute; top : 20px; left : 130px; }
+#logo img, #foot_logo img { width : 100px; height : 135px; }
+#top_menuBox { width : 100%; height : 25px; background : rgba(255,255,255,0.5); box-shadow : 0 1px 5px gray; }
+#top_menuBox:hover { background : rgba(0,255,0,0.5); }
+#top_menuBox:hover a, #top_menuBox:hover li { color : #fff; }
+#top_menu { position : absolute; right : 10px; }
+#top_menu > li { display : inline-block; margin-right : 5px; font-size: 12px; }
+#top_menu > li a { color : #333; font-weight : bold; font-size: 12px;}
+#top_menu > li > a:hover { text-decoration : underline; }
+#top_menu > li.lang a:hover { text-decoration : none; }
+  /* .lang:hover .lang_menu { display : block; } */
+  .lang_menu { background : rgba(0,255,0,0.5); position : absolute; 
+						left : 125px; width : 80px; top : 25px;
+					text-align : center; display : none; height : 110px; }
+  .lang_menu li { padding : 0 2px; }
+  .lang_menu li a { display : block; padding : 5px; letter-spacing : 1.2px; }
+  .lang_menu li a:hover { background : rgba(255,255,255,0.3); border : 1px solid #ccc; }
+  
+/* ------header #search------ */
+#s_box { position : absolute; top : 55px; left : 350px; }
+#search { width : 520px; height : 35px; outline : none; border-radius : 20px; 
+				padding : 0 30px 0 15px; font-size : 16px; box-shadow : 2px 2px 5px #000; 
+				border : 1px solid green; }
+.submit_img { width : 27px; position : relative; top : 10px; left : 0px; 
+					background : rgba(250,250,250,0.5); border-radius : 10px; 
+					box-shadow : 2px 2px 2px #000; transition : all 0.3s; }
+.submit_img:hover { transform : scale(1.2); }
+
+/* ------header #gnb------ */
+#gnb_box { position : absolute; bottom : 0px; left : 250px; }
+#gnb { display : flex; position : relative; }
+.gnb_item > a, #gnb_All { display : block; padding : 10px 40px; border : 1px solid lightblue;
+										color : #fff; transition : all 0.3s; font-weight : bold; }
+#gnb_All { width : 30px; padding : 7px 5px 4px 5px; cursor : pointer; 
+				position : absolute; right : -40px; top : 0px; }
+
+.gnb_item > a:hover, #gnb_All:hover { background : orange;  border : none; }
+.dropdown_list { width : 150px; height : 190px; background : rgba(0,0,255,0.5); position : absolute; 
+						padding-top : 10px; z-index : 99; display : none; }
+.gnb_item:nth-child(2) .dropdown_list { height : 460px; }
+.gnb_item:nth-child(3) .dropdown_list { height : 200px; }
+.gnb_item:nth-child(4) .dropdown_list { height : 310px; }
+.gnb_item:nth-child(5) .dropdown_list { height : 390px; }
+/* .gnb_item:hover .dropdown_list { display : block; } */
+.dropdown_item { text-align : center; }
+.dropdown_item a { display : block; padding : 7px 0; color : #fff; }
+.dropdown_item a:hover { background : rgba(255, 0, 0,0.7); color : #fff; font-weight : bold; }
+.dropdown_bg { width : 760px; height : 480px; background : rgba(0,0,0,0.7); 
+			position : absolute; top : 40px; z-index : 98; display : none; }
+
+
+/* main */
+main {  }
+
+/* ------ section banner ------ */
+#banner_box {  }
+.banner_img { width : 1200px; height : 400px; 
+						background : url("../images/ba_bg.jpg"); 
+						position : relative;  }
+.banner_img li { display : none; position : absolute; left : 0; top : 0; }
+.banner_img img { width : 1200px; height : 400px; }
+.buttons { position : absolute; top : 340px; width : 1140px; padding : 0 30px; }
+.buttons button { width : 60px; height : 60px; background : url("../images/slide_arrow.png") no-repeat center center/60px 60px; 
+						border : none; cursor: pointer; opacity : 0.2; }
+.buttons button:hover { opacity : 1; background : url("../images/slide_arrow_o.png") no-repeat center center/50px 50px; }
+.buttons button.next { transform : rotate(180deg); position : absolute; right : 30px; }
+.dot_circle { width : 150px; position : relative; top : -40px; 
+				left : 560px; opacity: 0.6; }
+.dot_circle li { display : inline-block; margin-right : 10px;
+					cursor : pointer; }
+
+/* ------lnb1------ */
+#lnb1 { width : 90%; height : 500px; margin : 30px auto; }
+.lnb1_list { width : 100%; height : 100%; display : grid; grid-template-columns : repeat(4, 25%); 
+	            grid-template-rows : repeat(2, 50%); text-align : center; }
+.lnb1_item { border : 1px solid red; padding : 20px; }
+.lnb1_item > h3 { margin-bottom : 20px; color : #fff; }
+.lnb1_item > p { color : #fff; margin : 25px 0; font-size : 14px; }
+.lnb1_item .lnb1_black { color : #000; }
+.lnb1_black > span { color : #f00; font-weight : bold; }
+
+.lnb1_item:nth-child(1) { background : #e55966; }
+.lnb1_search { height : 40px; padding : 0 10px; font-size : 13px; outline : none; 
+					border : none; border-radius : 10px; margin : 10px 0; }
+
+.lnb1_sub_item { margin-top : 5px; }
+.lnb1_sub_item a { display : block; color : #fff; font-size : 18px; padding : 10px 0; 
+						border : 1px solid #ccc;  border-radius : 10px;}
+.lnb1_sub_item a:hover { background : rgba(250,250,250,0.3); border : none; }
+.lnb1_item:nth-child(4) a:hover { background : rgba(28, 90, 41,0.1); border : none; }
+
+.lnb1_item:nth-child(2) { background : #f1903f; }
+.lnb1_item:nth-child(2) > p { font-size : 14px; margin-bottom : 20px; }
+.lnb1_item:nth-child(2) > form > input, .carrier { text-align : center; height : 25px; margin-top : 14px; }
+.carrier { width : 60px; height : 25px;  }
+.lnb1_item:nth-child(2) .submit_btn { outline : none; color : #fff; font-size : 18px; padding : 10px 0; 
+														border : 1px solid #ccc;  border-radius : 10px; height : 50px;
+														width : 210px; background : none; }
+.lnb1_item:nth-child(2) .submit_btn:hover { cursor : pointer; background : rgba(250,250,250,0.3); 
+																border : none;}
+
+.lnb1_item:nth-child(3) { background : #89bc33; }
+.lnb1_item:nth-child(4) { background : #ebeef5; }
+.lnb1_item:nth-child(5) { background : #90adff; }
+.lnb1_item:nth-child(6) { background : #ffbb39; }
+.lnb1_item:nth-child(7) { background : #a058d8; }
+.lnb1_item:nth-child(7) .lnb1_sub { display : flex; position : relative; }
+.lnb1_item:nth-child(7) .lnb1_sub_item:nth-child(2) { position : absolute; left : 105px; }
+.lnb1_item:nth-child(7) .lnb1_sub_item:nth-child(3) { position : absolute; top : 45px; }
+.lnb1_item:nth-child(7) .lnb1_sub_item:nth-child(4) { position : absolute; top : 45px; left : 105px; }
+.lnb1_item:nth-child(7) a { width : 100px; font-size : 15px; }
+.lnb1_item:nth-child(8) { background : #ffe7d0; }
+.lnb1_item:nth-child(8) > h3 { margin-top : -8px; }
+.lnb1_item:nth-child(8) > h3 > img { position : relative; width : 30px; height : 30px;}
+.lnb1_item:nth-child(8) > h3 > img:nth-child(1) { top : 3px; left : -2px; }
+.lnb1_item:nth-child(8) > h3 > img:nth-child(2) { top : 3px; left : 1px; }
+.lnb1_item8_inner { box-sizing : border-box; background : #fff; width : 100%; height : 70%; padding : 15px;
+							text-align : left; }
+
+/* ------lnb2------ */
+#lnb2 { width : 100%; height : 350px; background : rgba(255,255,255,0.3); }
+#lnb2 > p { font : bold 24px "맑은 고딕"; text-align : center; padding-top : 20px; }
+.lnb2_list { display : grid; grid-template-columns : repeat(6, 1fr); grid-template-rows : repeat(2, 50%); 
+	position : relative; top : 30px; left : 50px; width : 100%; height : 280px; text-align : center; }
+.lnb2_item > a { display : block; color : #000; font-weight : bold; width : 100px; height : 90px; 
+                  padding-top : 10px; }
+.lnb2_item > a:hover { background : rgba(28, 90, 41, 0.3); border-radius : 15px; color : #fff; }
+
+/* ------lnb3------ */
+#lnb3 { width : 100%; height : 550px; background : rgba(255,255,255,0.3); 
+                margin : 30px 0; }
+#button_box1 { position : relative; left : 450px; top : 30px; width : 730px; }
+.video_btn, .column_btn { border : 1px solid purple; width : 130px; 
+										padding : 10px 0; background : rgba(255,132,0,0.5); 
+										border : none; border-radius : 10px;
+									cursor : pointer; color : #fff; font : 20px 휴먼편지체; }
+#button_box1 button:hover { box-shadow : 2px 2px 2px gray; 
+														background : orange; font-weight : bold;}
+a.more_btn { display : inline-block; width : 70px; cursor : pointer;
+					position : absolute; left : 670px; font-weight : bold; }
+a.more_btn:hover { text-shadow : 0 5px 10px orange; }
+a.more_btn:after { content : ""; display : inline-block; width : 25px; height : 17px; 
+						background : url("../images/right_arrow.png");
+						transition : all 0.3s; transform : translateX(0px); }
+a.more_btn:hover:after { animation : more 0.3s infinite alternate; }
+
+@keyframes more {
+						0% { transform : translateX(0px); }
+						100% { transform : translateX(10px); }
+}
+
+#contents_box1 { width : 1080px; height : 425px; margin : 50px auto; 
+                  padding : 15px; position : relative; }
+.contents1 { position : absolute; left : 0; top : 0; }
+#contents1-2 { display : none; } /*건강칼럼은 처음엔 숨겼다가 클릭하면 나타나게하기 */
+.contents1 li { width : 510px; height : 195px; float : left; 
+						border-bottom : 1px solid #666;  }
+li.content1, li.content2 { margin-bottom : 20px; }
+li.content1, li.content3 { margin-right : 60px; }
+.contents1 li a h3, #contents1 li a h4 { display : inline; }
+.contents1 li a h3 { float : left; margin-right : 20px;}
+.contents1 li a h3:hover { box-shadow: 2px 2px 10px green; }
+.contents1 li a h4 { color : #333; }
+.contents1 li a h4:hover { text-shadow: 0px 0px 10px green; }
+.date { position : relative; top : 125px; color : #eee; font-weight : bold; }
+#contents1-2 .date { top : 98px; }
+
+/* ------lnb4------ */
+#lnb4 { width : 100%; height : 470px; background : rgba(255,255,255,0.3); }
+#button_box2 { position : relative; left : 400px; top : 30px; width : 780px; }
+.info_btn, .media_btn, .recruit_btn { border : 1px solid purple; width : 130px; padding : 10px 0; 
+										background : rgba(255,132,0,0.5); border : none; border-radius : 10px;
+										cursor : pointer; color : #fff; font : 20px 휴먼편지체; }
+.info_btn:hover, .media_btn:hover, .recruit_btn:hover { box-shadow : 2px 2px 2px gray; background : orange; 
+										font-weight : bold;}
+#button_box2 a.more_btn { left : 720px;}
+#contents_box2 { width : 1145px; height : 275px; margin : 60px auto; 
+							padding : 15px 0 0 20px; position : relative; }
+.contents2 { position : absolute; left : 10px; top : 30px; }
+.contents2 li { display : inline-block; transition : all 0.5s; 
+					transform : translateY(0px); width : 240px; 
+					height : 220px; margin-right : 50px; 
+					border-radius : 10px; }
+.contents2 li:hover {  transform : translateY(-15px);
+								 }
+.contents2 li a { width : 240px; height : 220px; 
+						background : rgba(255,255,255,0.5); float : left; 
+						 border-radius : 10px; 
+						padding : 20px 10px; }
+.contents2 li:last-child { margin-right : 0;}
+.contents2 li a:hover { box-shadow : 0 15px 20px #fff; }
+.contents2 li a h4 { color : #333; }
+.contents2 li a p { color : #666; font-weight : bold; font-size : 13px; margin-top : 20px; }
+.contents2 .date { position : relative; left : 150px; top : -35px; color : #00f; 
+						width : 100px; height : 15px; }
+#contents2-3 li a p { font-size : 18px; color : #333; }
+
+/* footer */
+footer { width : 100%; height : 220px; background : #333; font-size : 14px;
+        position : relative; }
+#foot_menuBox { position : absolute; top : 25px; left : 100px;  }
+.foot_menu { color : #fff; }
+.foot_menu li { display : inline; color : #fff; margin-right : 5px;}
+.foot_menu li a { color : #fff; margin-right : 5px; font-weight : bold;}
+.foot_menu li a:hover { color : orange; }
+
+#sns_box {  width : 190px; height : 40px;
+  position : absolute; top : 15px; right : 150px; }
+.share_sns { display : flex; }
+.share_sns li { margin-right : 10px; }
+.share_sns li button { width : 45px; height : 45px; border : none; }
+  .kakao {  background : url("../images/SNS_icon/kakao.png") no-repeat; background-size: 40px 40px; }
+  .kakao:hover { background : url("../images/SNS_icon/kakao_o.png") no-repeat; background-size: 40px 40px; }
+  .instargram {  background : url("../images/SNS_icon/instargram.png") no-repeat; background-size: 40px 40px; }
+  .instargram:hover { background : url("../images/SNS_icon/instargram_o.png") no-repeat; background-size: 40px 40px; }
+  .blog {  background : url("../images/SNS_icon/blog.png") no-repeat; background-size: 40px 40px; }
+  .blog:hover { background : url("../images/SNS_icon/blog_o.png") no-repeat; background-size: 40px 40px; }
+  .facebook {  background : url("../images/SNS_icon/facebook.png") no-repeat; background-size: 40px 40px; }
+  .facebook:hover { background : url("../images/SNS_icon/facebook_o.png") no-repeat; background-size: 40px 40px; }
+  .twitter {  background : url("../images/SNS_icon/twitter.png") no-repeat; background-size: 40px 40px; }
+  .twitter:hover { background : url("../images/SNS_icon/twitter_o.png") no-repeat; background-size: 40px 40px; }
+
+footer address { font-style : normal; position : absolute; top : 70px; left : 100px;
+						color : #fff; border-top : 1px solid #fff; padding : 20px 380px 0 0;}
+#foot_logo { position : absolute; top : 110px; left : 350px; }
+#foot_logo img { width : 88px; height : 110px; }
+footer small { color : #fff; position : absolute; bottom : 20px; left : 450px; }
+
+/* top_bottom_move : 맨위, 맨아래로 이동하는 버튼 */
+#top_bottom_move { width : 50px; height : 200px;
+								position : fixed; right : 30px; bottom : 100px; 
+								z-index : 9999; }
+.tb { width : 40px; height : 40px; border-radius : 50%;
+		border : 1px solid #ccc; background : #fff; 
+		margin : 5px auto; text-align : center; line-height : 40px; 
+		cursor : pointer; }
+.tb:hover { background : rgba(0,0,0,0.5); color : #fff;}
+
+.topMove { display : none; }
+.bottomMove { position : absolute; bottom : 100px; left : 4px; }
+.wrapperFade { position : absolute; bottom : 50px; left : 4px; } /* wrapper요소 fadeToggle 기능 버튼*/
+.bodyBgChange { position : absolute; bottom : 0; left : 4px; } /* body요소 이미지 변경 버튼*/
